@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 272855621}
   - component: {fileID: 272855620}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: visitors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
