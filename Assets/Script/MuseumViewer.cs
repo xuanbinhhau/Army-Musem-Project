@@ -32,6 +32,8 @@ public class MuseumViewer : MonoBehaviour
 
     void Update()
     {
+        if (Viewer3D.IsViewing) return;   // ← thêm: đang xem 3D thì không xử lý gì
+
         // 1. Giữ chuột phải để xoay camera
         if (Input.GetMouseButton(1))
         {
@@ -61,6 +63,11 @@ public class MuseumViewer : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) panel.SetActive(false);
+    }
+
+    public void HidePanel()               // ← thêm: để Viewer3D gọi khi vào chế độ 3D
+    {
+        panel.SetActive(false);
     }
 
     void Show(PaintingInfo info)
